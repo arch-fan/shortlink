@@ -1,0 +1,17 @@
+---
+import { getUrlById } from "../../db/shortner";
+
+const { urlid } = Astro.params;
+
+if (urlid) {
+  const url = await getUrlById(urlid);
+
+  if (!url) {
+    return Astro.redirect("/404");
+  }
+
+  return Astro.redirect(url);
+} else {
+  return Astro.redirect("/404");
+}
+---

@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SubmitLink from "../components/SubmitLink.svelte";
+import Github from "../icons/Github.astro";
+---
+
+<Layout
+  title="Shortlink | Short your links for free"
+  description="Shorten links"
+>
+  <background class="absolute w-full h-full opacity-[.1] -z-[1] bg-noise"
+  ></background>
+  <div class="max-w-5xl px-4 min-h-screen flex flex-col m-auto">
+    <main class="flex flex-col items-center gap-4 pt-[20vh]">
+      <h1 class="text-slate-200 font-extrabold text-8xl">Shortlink</h1>
+      <p class="font-bold text-xl text-slate-300">Short your links for free</p>
+      <section class="w-full flex">
+        <SubmitLink client:load />
+      </section>
+    </main>
+    <footer
+      class="mt-auto flex justify-between w-full p-1 text-gray-400 fill-gray-400"
+    >
+      <a href="https://github.com/arch-fan">@arch-fan</a>
+      <span class="flex gap-1">
+        <Github class="h-6 w-auto" />
+        <a href="https://github.com/arch-fan/shortlink" class="hover:underline"
+          >Github</a
+        >
+      </span>
+    </footer>
+  </div>
+</Layout>
