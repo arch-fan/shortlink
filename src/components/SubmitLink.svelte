@@ -64,12 +64,14 @@
   </div>
 
   {#if shortened}
-    <div class="flex flex-col gap-2 items-center mt-2">
+    <div class="flex flex-col gap-2 items-center mt-2 w-full lg:w-auto">
       <h3>Your link shortened:</h3>
       <p
-        class="py-6 px-12 rounded-xl relative bg-[#0d0d0d] border-1 shadow-xl text-start"
+        class="py-6 flex lg:px-12 rounded-xl relative w-full lg:w-auto bg-[#0d0d0d] border-1 shadow-xl text-start"
       >
-        <a href={shortened} class="text-[#09f] hover:underline hover:text-white"
+        <a
+          href={shortened}
+          class="text-[#09f] hover:underline w-full text-center hover:text-white"
           >{shortened}</a
         >
 
